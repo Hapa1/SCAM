@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Class Home Page</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="./ClassDetails.html"></script>
+    <script scr="./Teachers.html"></script>
+    <script src="./Students.html"></script>
+    <script src="./ClassNotes.html"></script>
+    <script src="./Profile.html"></script>
+</head>
+<body>
+	<div id="header">
+		<div id="topBut">
+			<ul id="ul">
+				<li class="button"><a href="./classDetails/courseDetail.html">Class Details</a></li>
+				<li class="button"><a href="./teacehrs/teachers.html">Teachers</a></li>
+				<li class="button"><a href="./students/students.html">Students</a></li>
+				<li class="button"><a href="./classNotes/classNotes.html">Class Notes</a></li>
+				<li class="profile"><a href="./../profile/profile.html">Profile</a></li>
+			</ul>
+		</div>
+	</div> 
+	<div id="banner">
+		<div id="SCAM">
+			<img src="San_Jose_State_Spartans.jpg" width="100" height="75" alt="SJSU logo">
+		</div>
+		<div id="classLogo">
+			<p id="classTitle">Class Title</p>
+		</div>
+	</div>
+	<div id="botPage">
+		<ul>
+			<li class="Bot">
+				<div id="newsFeed">
+					<p class="news">Here are some random texts</p>
+				</div>
+			</li>
+			<li class="Bot">
+				<div id="chatBox">
+				<button type="button" onclick="toggleChat()">Chat</button>
+		</div>
+			</li>
+		</ul>
+	</div>
+	<script>
+		function openClassDet(){
+			windows.open("./ClassDetails.html")
+		}
+		function openTeachers(){
+			windows.open("./Teachers.html")
+		}
+		function openStudents(){
+			windows.open("./Students.html")
+		}
+		function openClassNotes(){
+			windows.open("./ClassNotes.html")
+		}
+		function openProfile(){
+			windows.open("./Profile.html")
+		}
+		function toggleChat(){
+			var x = document.getElementById('chatBox');
+
+		}
+	</script>
+	</body>
+</html>

@@ -1,0 +1,86 @@
+        body{
+			background-image: url("bodyBG.jpg");
+            background-size: 100%;
+            background-position: center;
+            max-width: 100%;
+            height: auto;
+            width: auto;
+		}
+        p {
+            text-align: center;
+            font-family: serif;
+            font-weight: normal;
+        }
+        div#header{
+        	background-color: green; 
+        	height: 50px;
+        	width: 100%;
+        }
+        	li.button{
+        		float: left;
+        		font-size: 15px;
+        		font-family: sans-serif;
+				list-style-type: none;
+        	}
+        	li.profile{
+        		float: right;
+        		font-family: sans-serif;
+        		list-style-type: none;
+        	}
+        	li a {
+    			display: block;
+    			color: white;
+    			text-align: center;
+    			padding: 16px;
+    			text-decoration: none;
+			}
+			li a:hover{
+				background-color: #111111;
+			}
+        div#banner{
+        	height: 200px;
+        	width: 100%;
+        }
+    	    div#SCAM{
+        		background-size: 250px 175px;
+        		background-position: top left;
+        		background-repeat: no-repeat;
+        		margin: 50px 0px 0px 0px;
+        		float: left;
+        	}
+        	div#classLogo{
+	        	background-size: 250px 175px;
+        		background-position: top right;
+        		background-repeat: no-repeat;
+        		padding: 0px 0px 500px 0px;
+        		margin: 20px 0px 0px 70px;
+        		float: right;
+        	}
+        	p#classTitle{
+        		float:right;
+        		font-size: 50px;
+        		padding: 0px 50px 0px 0px;
+        	}
+        div#botPage{
+        	display: inline;
+        	margin: 0px;
+        	padding: 0px;
+        }
+        div#newsFeed{
+        	height: 500px;
+        	width: 950px;
+        	background-color: orange;
+        	margin: 0px;
+        }
+        	p.news{
+        		margin: 0px;
+        		padding: 0px;
+				text-align: left;
+        		text-indent: 50px;
+        	}
+        div#chatBox{
+        	float: right;
+        }
+        li.Bot{
+        	display: inline;
+        }
