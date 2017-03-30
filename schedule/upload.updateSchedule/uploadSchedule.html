@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Upload Schedule</title>
+    <link rel="stylesheet" text="text/css" href="./style.css">
+</head>
+<body>
+    <div id="icon">
+        <ul id="iconList">
+            <li class="webIcon"><a href="./../../index.html">ScouterImg</a></li>
+        </ul>
+    </div>
+    <div id="header">
+        <div id="topBut">
+            <ul id="ul">
+                <li class="button"><a href="./../../index.html">Home</a></li>
+                <li class="profile"><a href="./../../profile/profile.html">Profile</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="studentSchedule">
+        <h1>Upload/Update Your Schedule Here</h1>
+        <br><br><br><br><br><br><br><br>
+        <p>
+        <ul class="agenda">
+            <li style="list-style-type: none;">
+                <input type="text" name="actName" placeholder="Class Title" size="20">
+                Starting: Hour <select name="Hour">
+                    <option value="0100">01</option>
+                    <option value="0200">02</option>
+                    <option value="0300">03</option>
+                    <option value="0400">04</option>
+                    <option value="0500">05</option>
+                    <option value="0600">06</option>
+                    <option value="0700">07</option>
+                    <option value="0800">08</option>
+                    <option value="0900">09</option>
+                    <option value="1000">10</option>
+                    <option value="1100">11</option>
+                    <option value="1200">12</option>
+                </select> 
+                Minute: <select name="Minutes">
+                    <option value="00">00</option>
+                    <option value="05">05</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                    <option value="35">35</option>
+                    <option value="40">40</option>
+                    <option value="45">45</option>
+                    <option value="50">50</option>
+                    <option value="55">55</option>
+                </select>
+                <select name="AM/PM">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+                Ending: Hour <select name="Hour">
+                    <option value="0100">01</option>
+                    <option value="0200">02</option>
+                    <option value="0300">03</option>
+                    <option value="0400">04</option>
+                    <option value="0500">05</option>
+                    <option value="0600">06</option>
+                    <option value="0700">07</option>
+                    <option value="0800">08</option>
+                    <option value="0900">09</option>
+                    <option value="1000">10</option>
+                    <option value="1100">11</option>
+                    <option value="1200">12</option>
+                </select> 
+                Minute: <select name="Minutes">
+                    <option value="00">00</option>
+                    <option value="05">05</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                    <option value="35">35</option>
+                    <option value="40">40</option>
+                    <option value="45">45</option>
+                    <option value="50">50</option>
+                    <option value="55">55</option>
+                </select>
+                <select name="AM/PM">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+                <input type="checkbox" name="Day" value="Sunday">Sun
+                <input type="checkbox" name="Day" value="Monday">Mon
+                <input type="checkbox" name="Day" value="Teusday">Teu
+                <input type="checkbox" name="Day" value="Wednesday">Wed
+                <input type="checkbox" name="Day" value="Thursday">Thur
+                <input type="checkbox" name="Day" value="Friday">Fri
+                <input type="checkbox" name="Day" value="Saturday">Sat
+            </li>
+            <li id="addClass">
+                <!--Suppose to call a function-->
+                <a style="color: blue;"href="">Add another class</a>
+            </li>
+        </ul>
+        <br><br><br><br>
+        <input id="submit" type="submit" style="width: 8em; height: 3em">
+        </p>
+        <br><br><br><br><br><br>
+    </div>
+</body>
+</html>
