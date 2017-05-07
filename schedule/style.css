@@ -8,6 +8,8 @@ body{
 div#icon ul#iconList{
     padding: 0;
     margin: 0;
+    width: auto;
+    height: 100px;
 }
     li.webIcon{
         text-align: center;
