@@ -18,7 +18,7 @@ html {
     color: #555;
     font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 50px;
     text-rendering: optimizeLegibility;
 }
 
@@ -83,6 +83,15 @@ h2:after{
 }
 
 /*--------------------*/
+/* HEADER ALTERNATIVE*/
+/*--------------------*/
+
+/*
+
+*/
+
+
+/*--------------------*/
 /* HEADER*/
 /*--------------------*/
 header {
@@ -93,6 +102,8 @@ header {
     height: 100vh;
     background-color: #333;
 }
+
+/*
 .header-nav {
     list-style: none;
     float: left;
@@ -129,12 +140,15 @@ footer p {
     
 }
 
+*/
+
 .hero-text-box {
     position: absolute;
     width: 1140px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 22px
 }
 
 .logo {
@@ -146,7 +160,7 @@ footer p {
 
 .main-nav{
     float: right; 
-     list-style: none;
+    list-style: none;
     margin-top: 55px;
 }
 
@@ -160,7 +174,7 @@ footer p {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size:  90%;
+    font-size:  28px;
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.2s;
 }
@@ -180,6 +194,7 @@ footer p {
     background-color: #0055A2;
     color: #fff;
     padding: 10px 30px;
+    font: 35px;
     font-weight: 300;
     text-decoration: none;
     border-radius: 200px;
@@ -224,7 +239,7 @@ footer p {
     text-align: center;
     padding: 140px;
     color: #e6f3ff;
-    font-size: 140%;
+    font-size: 180%;
     background-color: #0055A2 
     
 }
@@ -253,7 +268,7 @@ footer p {
     margin: auto;
     width: 100%;
     text-align: center; 
-    font-size: 140%
+    font-size: 200%
 }
 
 .section-features p{
@@ -276,7 +291,8 @@ footer p {
 /* --- SJSU show --*/
 /*--------------------*/
 .SJSU-showcase{
-    padding: 200px;
+    padding: 0;
+    background: white;
 }
 .sjsu-show{
     list-style: none;
@@ -299,6 +315,14 @@ footer p {
     height: auto;
 }
 
+section .col-md-4 {
+    padding: 5px;
+}
+section .col-md-4 img {
+    min-height: 400px;
+    padding-bottom: 10px;
+}
+
 /*--------------------*/
 /* FOOTER*/
 /*--------------------*/
@@ -306,7 +330,7 @@ footer p {
 footer{
     background-color: #333;
     padding: 100px;
-    font-size: 80%
+    font-size: 200%
 }
 
 .footer-nav{
@@ -371,5 +395,5 @@ footer{
 footer p {
     color: #fff;
     text-align: center;
-    font-size: 80%;   
+    font-size: 70%;   
 }
