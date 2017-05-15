@@ -1,0 +1,16 @@
+Rails.application.routes.draw do
+  # resources :homes
+  get '/homes' => 'homes#index'
+  get '/homes/createSchedule' => 'homes#createSchedule', as: 'homes_createSchedule'
+  get '/homes/classHome' => 'homes#classHome', as: 'homes_classHome'
+  # get '/homes/classHome/teachers' => 'classHome#teachers', as: 'homes_classHome_teachers'
+  # get '/homes/classHome/classNotes' => 'classHome#classNotes', as: 'homes_classHome_classNotes'
+  # get '/homes/classHome/students' => 'classHome#students', as: 'homes_classHome_students'
+  
+  get '/homes/profile' => 'homes#profile', as: 'homes_profile'
+  
+  get '/homes/schedule/' => 'homes#schedule', as: 'homes_schedule'
+  # supposed to be: get '/homes/schedule/createSchedule' => 'schedule#createSchedule', as: 'homes_schedule_createSchedule'
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'homes#index'
+end
