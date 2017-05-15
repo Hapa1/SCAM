@@ -1,147 +1,170 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Upload Schedule</title>
-    <link rel="stylesheet" text="text/css" href="./style.css">
-</head>
-<body>
-    <div id="icon">
+<%= stylesheet_link_tag 'createSchedule' %>
+<%= javascript_include_tag 'createSchedule' %>
+<div id="icon">
         <ul id="iconList">
-            <li class="webIcon"><a href="./../../index.html"><img src="../../logo3.png" class="logo"></a></li>
+            <li class="webIcon"><%= link_to image_tag("logos/logo3.png", class: "logo", alt: "web logo"), homes_path %></li>
         </ul>
     </div>
     <div id="header">
         <div id="topBut">
             <ul id="ul">
-                <li class="button"><a href="./../../index.html">Home</a></li>
-                <li class="profile"><a href="./../../profile/profile.html">Profile</a></li>
+                <li class="button"><%= link_to "Home", homes_path %></li>
+				<li class="button"> <%= link_to "Schedule", homes_schedule_path %> </li>
+                <li class="button"><%= link_to "Classes", homes_classHome_path %></li>
+                <li class="button" style="float: right;"><%= link_to "Profile/Login", homes_profile_path %></li>
             </ul>
         </div>
     </div>
-    <div id="studentSchedule">
-        <h1>Update Your Schedule Here</h1>
-        <br><br><br><br><br><br><br><br>
-        <p>
-        <form action="" method="post">
+    <div id="studentSchedule"><br><br>
+        <h1 class="fancyFont">"A goal properly set is halfway reached." -Zig Ziglar</h1>
+        <br><br><br>
+        <!--<form action="" method="POST">-->
+        <%= form_for(@homes) do |f| %>
             <fieldset>
-                <legend></legend>
                 <ul id="agenda">
                     <div id="Act">
-                        <li style="list-style-type: none;">
-                            <input list="majNames" type="text" name="actName" placeholder="Class Title" size="20" autofocus required>
-                                <datalist id="majNames">
-                                    <option value="CmpE"></option>
-                                    <option value="SE"></option>
-                                    <option value="CE"></option>
-                                    <option value="BME"></option>
-                                    <option value="ChE"></option>
-                                    <option value="MatE"></option>
-                                    <option value="EE"></option>
-                                    <option value="ME"></option>
-                                    <option value="ISE"></option>
-                                    <option value="AE"></option>
-                                </datalist>
-                            Starting: Hour <select name="startHour" required>
-                                <option></option>
-                                <option value="0100">01</option>
-                                <option value="0200">02</option>
-                                <option value="0300">03</option>
-                                <option value="0400">04</option>
-                                <option value="0500">05</option>
-                                <option value="0600">06</option>
-                                <option value="0700">07</option>
-                                <option value="0800">08</option>
-                                <option value="0900">09</option>
-                                <option value="1000">10</option>
-                                <option value="1100">11</option>
-                                <option value="1200">12</option>
-                            </select> 
-                            Minute: <select name="startMinutes" required>
-                                <option></option>
-                                <option value="00">00</option>
-                                <option value="05">05</option>
-                                <option value="10">10</option>
-                                <option value="15">15</option>
-                                <option value="20">20</option>
-                                <option value="25">25</option>
-                                <option value="30">30</option>
-                                <option value="35">35</option>
-                                <option value="40">40</option>
-                                <option value="45">45</option>
-                                <option value="50">50</option>
-                                <option value="55">55</option>
-                            </select>
-                            <select name="startAM/PM" required>
-                                <option></option>
-                                <option value="AM">AM</option>
-                                <option value="PM">PM</option>
-                            </select>
-                            Ending: Hour <select name="endHour" required>
-                                <option></option>
-                                <option value="0100">01</option>
-                                <option value="0200">02</option>
-                                <option value="0300">03</option>
-                                <option value="0400">04</option>
-                                <option value="0500">05</option>
-                                <option value="0600">06</option>
-                                <option value="0700">07</option>
-                                <option value="0800">08</option>
-                                <option value="0900">09</option>
-                                <option value="1000">10</option>
-                                <option value="1100">11</option>
-                                <option value="1200">12</option>
-                            </select> 
-                            Minute: <select name="endMinutes" required>
-                                <option></option>
-                                <option value="00">00</option>
-                                <option value="05">05</option>
-                                <option value="10">10</option>
-                                <option value="15">15</option>
-                                <option value="20">20</option>
-                                <option value="25">25</option>
-                                <option value="30">30</option>
-                                <option value="35">35</option>
-                                <option value="40">40</option>
-                                <option value="45">45</option>
-                                <option value="50">50</option>
-                                <option value="55">55</option>
-                            </select>
-                            <select name="endAM/PM" required>
-                                <option></option>
-                                <option value="AM">AM</option>
-                                <option value="PM">PM</option>
-                            </select>
-                            <input type="checkbox" name="Day1" value="Sunday">Sun
-                            <input type="checkbox" name="Day2" value="Monday">Mon
-                            <input type="checkbox" name="Day3" value="Teusday">Teu
-                            <input type="checkbox" name="Day4" value="Wednesday">Wed
-                            <input type="checkbox" name="Day5" value="Thursday">Thur
-                            <input type="checkbox" name="Day6" value="Friday">Fri
-                            <input type="checkbox" name="Day7" value="Saturday">Sat
-                        </li>
-                        <textarea name="actDes" rows="3" cols="50" maxlength="100" style="float: left;"></textarea>
-                        <br><br><br><br>
+                        <li>
+                            <div class="left">
+                                <%= f.label(:Class) %>
+                            </div>
+                            <div class="right">
+                                <input class="leftMargin" type="text" name="actName" size="20" autofocus required>
+                            </div>
+                            <br><hr>
+                            <div class="left">
+                                <%= f.label :"Class Description" %>
+                            </div>
+                            <div class="right">
+                                <textarea class="Space leftMargin" name="actDes" rows="3" cols="22" maxlength="100"></textarea>
+                            </div>
+                            <br><br><br><br><hr>
+                            <div class="left">
+                                <%= f.label :"Starting Time:" %>
+                            </div>
+                            <div class="right">
+                                <%= f.label(:title, "Hour: ", class: "leftMargin") %>
+                                    <select class="leftMargin" name="startHour" required>
+                                    <option></option>
+                                    <option value="0100">01</option>
+                                    <option value="0200">02</option>
+                                    <option value="0300">03</option>
+                                    <option value="0400">04</option>
+                                    <option value="0500">05</option>
+                                    <option value="0600">06</option>
+                                    <option value="0700">07</option>
+                                    <option value="0800">08</option>
+                                    <option value="0900">09</option>
+                                    <option value="1000">10</option>
+                                    <option value="1100">11</option>
+                                    <option value="1200">12</option>
+                                </select> 
+                                <%= f.label(:title, "Minute: ", class: "Space leftMargin") %><select class="leftMargin" name="startMinutes" required>
+                                    <option></option>
+                                    <option value="00">00</option>
+                                    <option value="05">05</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                    <option value="30">30</option>
+                                    <option value="35">35</option>
+                                    <option value="40">40</option>
+                                    <option value="45">45</option>
+                                    <option value="50">50</option>
+                                    <option value="55">55</option>
+                                </select>
+                                <select class="leftMargin" name="startAM/PM" required>
+                                    <option></option>
+                                    <option value="AM">AM</option>
+                                    <option value="PM">PM</option>
+                                </select>
+                            </div>
+                            <br><hr>
+                            <div class="left">
+                                <%= f.label :"Ending Time:" %>
+                            </div>
+                            <div class="right">
+                                <%= f.label(:title, "Hour: ", class: "leftMargin") %><select class="leftMargin" name="endHour" required>
+                                    <option></option>
+                                    <option value="0100">01</option>
+                                    <option value="0200">02</option>
+                                    <option value="0300">03</option>
+                                    <option value="0400">04</option>
+                                    <option value="0500">05</option>
+                                    <option value="0600">06</option>
+                                    <option value="0700">07</option>
+                                    <option value="0800">08</option>
+                                    <option value="0900">09</option>
+                                    <option value="1000">10</option>
+                                    <option value="1100">11</option>
+                                    <option value="1200">12</option>
+                                </select> 
+                                <%= f.label(:title, "Minute: ", class: "Space leftMargin") %><select class="leftMargin" name="endMinutes" required>
+                                    <option></option>
+                                    <option value="00">00</option>
+                                    <option value="05">05</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                    <option value="30">30</option>
+                                    <option value="35">35</option>
+                                    <option value="40">40</option>
+                                    <option value="45">45</option>
+                                    <option value="50">50</option>
+                                    <option value="55">55</option>
+                                </select>
+                                <select class="leftMargin" name="endAM/PM" required>
+                                    <option></option>
+                                    <option  value="AM">AM</option>
+                                    <option value="PM">PM</option>
+                                </select>
+                            </div>
+                            <br><hr>
+                            <div class="left">
+                                <%= f.label :"Available Days: " %>
+                            </div>
+                            <div class="right">
+                                <%= f.label(:title, "Sun", class: "leftMargin") %>
+                                    <input class="leftMarginBut" type="checkbox" name="Day1" value="Sunday">
+                                <%= f.label(:title, "Mon", class: "leftMargin") %>
+                                    <input class="leftMarginBut" type="checkbox" name="Day2" value="Monday">
+                                <%= f.label(:title, "Teu", class: "leftMargin") %>
+                                    ><input class="leftMarginBut" type="checkbox" name="Day3" value="Teusday">
+                                <%= f.label(:title, "Wed", class: "leftMargin") %>
+                                    <input class="leftMarginBut" type="checkbox" name="Day4" value="Wednesday">
+                                <%= f.label(:title, "Thur", class: "leftMargin") %>
+                                    <input class="leftMarginBut" type="checkbox" name="Day5" value="Thursday">
+                                <%= f.label(:title, "Fri", class: "leftMargin") %>
+                                    <input class="leftMarginBut" type="checkbox" name="Day6" value="Friday">
+                                <%= f.label(:title, "Sat", class: "leftMargin") %>
+                                    <input class="leftMarginBut" type="checkbox" name="Day7" value="Saturday">
+                            </div>
+                        </li>        
+                        <br><br><br>
                     </div>
+                    <br>
                     <div id="addClass1"></div>
+                    <br>
                     <div id="addClass2"></div>
+                    <br>
                     <div id="addClass3"></div>
+                    <br>
                     <div id="addClass4"></div>
+                    <br>
                     <div id="addClass5"></div>
+                    <br>
                     <div id="addClass6"></div>
+                    <br>
                     <div id="addClass7"></div>
-                    <button id="addButton" type="button" onclick="addAct()">Add another class</button>
-                    <li style="list-style-type: none;">
-                    </li>
+                    <br>
+                    <button class="btn addClassBut" type="button" onclick="addAct()">Add another class</button>
                 </ul>
-                <br><br><br><br>
-                <input type="submit" id="text" value="Generate Schedule" style="width: 15em; height: 3em">
+                <br><br><br>
+                <%= submit_tag "Generate Schedule", class: "btn subBut" %>
                 </button>
             </fieldset>
-        </form>
-        </p>
+        <% end %>
         <br><br><br><br><br><br>
     </div>
     <script type="text/javascript" src="uploadSchedule.js"></script>
-</body>
-</html>
