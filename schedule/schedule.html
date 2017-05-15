@@ -1,27 +1,87 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Student Schedule</title>
-	<link rel="stylesheet" text="text/css" href="./style.css">
-</head>
-<body>
+	<%= stylesheet_link_tag 'schedule' %>
 	<div id="icon">
 		<ul id="iconList">
-			<li class="webIcon"><a href="./../index.html"><img src="../logo3.png" class="logo"></a></li>
+			<li class="webIcon"> <%= link_to image_tag("logos/logo3.png", class: "logo", alt: "web logo"), homes_path %> </li>
 		</ul>
 	</div>
 	<div id="header">
 		<div>
 			<ul>
-				<li class="button"><a href="./../index.html">Home</a></li>
-				<li class="button"><a href="./uploadSchedule/uploadSchedule.html">Upload/Update Schedule</a></li>
-				<li class="profile"><a href="./../profile/profile.html">Profile</a></li>
+				<li class="button"><%= link_to "Home", homes_path %></li>
+				<li class="button"><%= link_to "Create Schedule", homes_createSchedule_path %></li>
+				<li class="button"><%= link_to "Classes", homes_classHome_path %></li>
+				<li class="button" style="float: right;"><%= link_to "Profile/Login", homes_profile_path %></li>
 			</ul>
 		</div>
 	</div>
-	<div id="studentSchedule">
-		<p>Uploaded schedule goes here</p>
+	<div id="studentSchedule"><br><br>
+		<h1 class="fancyFont">"Yesterday is gone. Tomorrow has not yet come. We have only today. Let us begin."  -Mother Teresa</h1>
+		<table id="table" width="70%" align="center">
+			<div id="head_nav">
+				<tr>
+					<th>Time</th>
+					<th>Monday</th>
+					<th>Teusday</th>
+					<th>Wednesday</th>
+					<th>Thursday</th>
+					<th>Friday</th>
+					<th>Saturday</th>
+				</tr>
+			</div>
+			<tr>
+				<th>7:00am - 8:00am</th>
+				<!--<td>activities goes here</td>-->
+			</tr>
+			<tr>
+				<th>8:00am - 9:00am</th>
+				<!--<td>activities goes here</td>-->
+			</tr>
+			<tr>
+				<th>9:00am - 10:00am</th>
+				<!--<td>activities goes here</td>-->
+			</tr>
+			<tr>
+				<th>10:00am - 11:00am</th>
+				<!--<td>activities goes here</td>-->
+			</tr>
+			<tr>
+				<th>11:00am - 12:00pm</th>
+			</tr>
+			<tr>
+				<th>12:00pm - 1:00pm</th>
+				<!--<td>activities goes here</td>-->
+			</tr>
+			<tr>
+				<th>1:00pm - 2:00pm</th>
+				<!--<td>activities goes here</td>-->
+			</tr>
+			<tr>
+				<th>2:00pm - 3:00pm</th>
+				<!--<td>activities goes here</td>-->
+			</tr>
+			<tr>
+				<th>3:00pm - 4:00pm</th>
+				<!--<td>activities goes here</td>-->
+			</tr>
+			<tr>
+				<th>4:00pm - 5:00pm</th>
+				<!--<td>activities goes here</td>-->
+			</tr>
+			<tr>
+				<th>5:00pm - 6:00pm</th>
+				<!--<td>activities goes here</td>-->
+			</tr>
+			<tr>
+				<th>6:00pm - 7:00pm</th>
+				<!--<td>activities goes here</td>-->
+			</tr>
+			<tr>
+				<th>7:00pm - 8:00pm</th>
+				<!--<td>activities goes here</td>-->
+			</tr>
+			<tr>
+				<th>8:00pm - 9:00pm</th>
+				<!--<td>activities goes here</td>-->
+			</tr>
+		</table>
 	</div>
-</body>
-</html>
