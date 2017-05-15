@@ -1,141 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
+<%= stylesheet_link_tag 'homePageGrid.css' %>
+<%= stylesheet_link_tag 'homePageMin' %>
+<%= stylesheet_link_tag 'homePageNormalize' %>
+<%= stylesheet_link_tag 'homePageStyle3' %>
+<%= image_tag("logos/logo3.png", class: "logo", alt: "web logo") %>
 
-<head>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/vendors/css/images/grid.css">
-    <link rel="stylesheet" type="text/css" href="/vendors/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="/resources/css/style3.css">
-    <link rel="stylesheet" type="text/css" href="/vendors/css/ionicons.min.css">
-    <link href='<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400, 300italic' rel='stylesheet' type='text/css'>
-    <title> Scouter by SJSU </title>
-</head>
-
-<body>
-    <header>
-        <nav>
-            <div class="row">
-                <img src="resources/css/images/logo3.png" class="logo">
-                <ul class="main-nav">
-                    <li> <a href="#"> Teachers </a> </li>
-                    <li> <a href="#"> Class Notes </a> </li>
-                    <li> <a href="#"> Login </a> </li>
-                    <li> <a href="#"> Sign up </a> </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="hero-text-box">
-            <h1> Be Successful By Connecting With Your Peers.</h1>
-            <a class="btn bnt-full" href="#"> Connect </a>
-            <a class="btn btn-ghost" href="#"> Show Me More </a>
+<header>
+    <nav>
+        <div class = "row">
+            <ul class = "main-nav">
+                <li> <%= link_to "Schedule", homes_schedule_path %> </li>
+                <li> <%= link_to "Classes", homes_classHome_path %> </li>
+                <li> <%= link_to "Login/Sign up", homes_profile_path %> </li>
+            </ul>
         </div>
-    </header>
-    <!--
-         <section class="home">
-            <div class = "hero-text-box">
-                <h1> Be Successful By Connecting With Your Peers.</h1>
-                <a class = "btn bnt-full" href = "#"> Connect </a>
-                <a class = "btn btn-ghost" href = "#"> Show Me More </a>
-            </div> 
-        </section>
--->
-
-    <section class="intro">
-        <div class="row">
-            <h2>Let graduation be a smooth ride to success!</h2>
-            <p class="long-copy">
-                Hello, we’re SJSU Scouter, your new platform to connect with friends at SJSU.
+    </nav>
+    <div class = "hero-text-box">
+        <h1> Be Successful By Connecting With Your Peers.</h1>
+        <a class = "btn btn-full" href = "#"> Connect </a>
+        <a class = "btn btn-ghost" href = "#"> Show Me More </a>
+    </div> 
+</header>
+            
+<section class="intro">
+    <div class="row">
+        <h2>Let graduation be a smooth ride to success!</h2>
+        <p class="long-copy">
+            Hello, we’re SJSU Scouter, your new platform to connect with friends at SJSU.
+        </p>
+    </div>
+</section>        
+        
+<section class="section-features">
+    <div class="row">
+        <div class="col span-1-of-4 box">
+            <i class="ion-university"></i>
+            <h3>What is SJSUScouter?</h3>
+            <p>
+                SJSUScouter is a site build to connect students with the SJSU community that will give student info on major coursesincluding: syllabus, homework, quizes,and exams. 
             </p>
         </div>
-    </section>
-
-
-    <section class="section-features">
-        <div class="row">
-            <div class="col span-1-of-4 box">
-                <i class="ion-university"></i>
-                <h3>What is SJSUScouter?</h3>
-                <p>
-                    SJSUScouter is a site build to connect students with the SJSU community that will give student info on major coursesincluding: syllabus, homework, quizes,and exams.
-                </p>
-            </div>
-            <div class="col span-1-of-4 box">
-                <i class="ion-network"></i>
-                <h3>How does it work? </h3>
-                <p>
-                    Students will have a social platform where they will be able to share content from previous and aything else you want to fucking say just place it right here.
-                </p>
-            </div>
-
-            <div class="col span-1-of-4 box">
-                <i class="ion-planet"></i>
-                <h3>Benefits</h3>
-                <p>
-                    Of course it will! Our goal is to give you as much insight on major required courses. By doing so, we aim to prepare you for your roadmap to graduation to the best of our capabilities.
-                </p>
-            </div>
+        <div class="col span-1-of-4 box">
+            <i class="ion-network"></i>    
+            <h3>How does it work? </h3>
+            <p>
+                Students will have a social platform where they will be able to share content from previous and aything else you want to fucking say just place it right here.
+            </p>
+        </div>                
+        <div class="col span-1-of-4 box">
+            <i class="ion-planet"></i>
+            <h3>Benefits</h3>
+            <p>         
+                Of course it will! Our goal is to give you as much insight on major required courses. By doing so, we aim to prepare you for your roadmap to graduation to the best of our capabilities.
+            </p>
         </div>
-    </section>
-
-    <section class="SJSU-showcase col-md-12">
-        <div class="col-md-4">
-            <img src="resources/css/images/sjsu1.jpg" alt="sjsulogo" class="img-responsive">
-            <img src="resources/css/images/sjsu3.jpg" alt="sjsucamp" class='img-responsive'>
-        </div>
-
-        <div class="col-md-4">
-            <img src="resources/css/images/sjsu2.jpg" alt="sjsugirl" class="img-responsive">
-            <img src="resources/css/images/sjsu5.jpg" alt="sjsustatue" class='img-responsive'>
-        </div>
-
-        <div class="col-md-4">
-            <img src="resources/css/images/sjsu3.jpg" alt="sjsucamp" class="img-responsive">
-            <img src="resources/css/images/sjsu6.jpg" alt="sjsumlk" class='img-responsive'>
-        </div>
-
-
-        <!--            
-                    <figure class="sjsu-photo">
-                        <img src="resources/css/images/sjsu3.jpg" alt="sjsucamp">
-                    </figure>
-                </li>
+    </div>
+</section>
+        
+<section class="SJSU-showcase">
+    <ul class="sjsu-show">
+        <li>
+            <figure class="sjsu-photo">
+            <%= image_tag("people/sjsu1.jpg", alt: "sjsulogo") %>
+            </figure>
+        </li>
+        <li>
+            <figure class="sjsu-photo">
+            <%= image_tag("people/sjsu2.jpg", alt: "sjsugirl") %>
+            </figure>
+        </li>
+        <li>
+            <figure class="sjsu-photo">
+            <%= image_tag("people/sjsu3.jpg", alt: "sjsucamp") %>
+            </figure>
+        </li>
+    </ul>
+    <ul class="sjsu-show">
+        <li>
+            <figure class="sjsu-photo">
+            <%= image_tag("people/sjsu4.jpg", alt: "sjsuclass") %>
+            </figure>
+        </li>
+        <li>
+            <figure class="sjsu-photo">
+            <%= image_tag("people/sjsu5.jpg", alt: "sjsustatue") %>
+            </figure>
+        </li>
+        <li>
+            <figure class="sjsu-photo">
+            <%= image_tag("people/sjsu6.jpg", alt: "sjsumlk") %>
+            </figure>
+        </li>
+    </ul>
+</section>
+        
+<footer>
+    <div class="row">
+        <div class="col span-1-of-2">
+            <ul class="footer-nav"> 
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms of Service & Honor Code</a></li>
             </ul>
-            <ul class="sjsu-show">
-                <li>
-                    <figure class="sjsu-photo">
-                        <img src="resources/css/images/sjsu4.jpg" alt="sjsuclass">
-                    </figure>
-                </li>
-                <li>
-                    <figure class="sjsu-photo">
-                        <img src="resources/css/images/sjsu5.jpg" alt="sjsustatue">
-                    </figure>
-                </li>
-                <li>
-                    <figure class="sjsu-photo">
-                        <img src="resources/css/images/sjsu6.jpg" alt="sjsumlk">
-                    </figure>
-                </li>
+        </div>     
+        <div class="col span-2-of-2">
+            <ul class="social-links">
+                <li><a href="#"><i class="icon-social-facebook"></i></a></li>
+                <li><a href="#"><i class="icon-social-instagram"></i></a></li>
+                <li><a href="#"><i class="icon-social-snapchat"></i></a></li>
             </ul>
--->
-    </section>
-
-    <footer>
-        <div class="row">
-            <div class="col span-1-of-2">
-                <ul class="footer-nav">
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Terms of Service & Honor Code</a></li>
-                </ul>
-            </div>
-
-            <div class="col span-2-of-2">
-                <ul class="social-links">
-                    <li><a href="#"><i class="icon-social-facebook"></i></a></li>
-                    <li><a href="#"><i class="icon-social-instagram"></i></a></li>
-                    <li><a href="#"><i class="icon-social-snapchat"></i></a></li>
-                </ul>
             </div>
         </div>
         <div class="row">
@@ -143,8 +115,4 @@
                 Copyright &copy; 2017 by SJSUScouter. All rights reserved.
             </p>
         </div>
-    </footer>
-</body>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-</html>
+</footer>
